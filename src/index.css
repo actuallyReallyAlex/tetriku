@@ -49,3 +49,103 @@ body {
   grid-template-columns: 90px 90px 90px;
   grid-template-rows: 150px;
 }
+
+.piece-container {
+  display: grid;
+  grid-template-columns: 30px 30px 30px 30px 30px;
+  grid-template-rows: 30px 30px 30px 30px 30px;
+  grid-template-areas:
+    "one two three four five"
+    "six seven eight nine ten"
+    "eleven twelve thirteen fourteen fifteen"
+    "sixteen seventeen eighteen nineteen twenty"
+    "twentyone twentytwo twentythree twentyfour twentyfive";
+  margin: 25px;
+}
+
+.piece-container__column {
+  grid-auto-flow: column;
+}
+
+.piece__single {
+  background: blue;
+  border: solid 1px;
+  height: 30px;
+  width: 30px;
+}
+
+.piece__single__1 {
+  grid-area: one;
+}
+.piece__single__2 {
+  grid-area: two;
+}
+.piece__single__3 {
+  grid-area: three;
+}
+.piece__single__4 {
+  grid-area: four;
+}
+.piece__single__5 {
+  grid-area: five;
+}
+.piece__single__6 {
+  grid-area: six;
+}
+.piece__single__7 {
+  grid-area: seven;
+}
+.piece__single__8 {
+  grid-area: eight;
+}
+.piece__single__9 {
+  grid-area: nine;
+}
+.piece__single__10 {
+  grid-area: ten;
+}
+.piece__single__11 {
+  grid-area: eleven;
+}
+.piece__single__12 {
+  grid-area: twelve;
+}
+.piece__single__13 {
+  grid-area: thirteen;
+}
+.piece__single__14 {
+  grid-area: fourteen;
+}
+.piece__single__15 {
+  grid-area: fifteen;
+}
+.piece__single__16 {
+  grid-area: sixteen;
+}
+.piece__single__17 {
+  grid-area: seventeen;
+}
+.piece__single__18 {
+  grid-area: eighteen;
+}
+.piece__single__19 {
+  grid-area: nineteen;
+}
+.piece__single__20 {
+  grid-area: twenty;
+}
+.piece__single__21 {
+  grid-area: twentyone;
+}
+.piece__single__22 {
+  grid-area: twentytwo;
+}
+.piece__single__23 {
+  grid-area: twentythree;
+}
+.piece__single__24 {
+  grid-area: twentyfour;
+}
+.piece__single__25 {
+  grid-area: twentyfive;
+}
