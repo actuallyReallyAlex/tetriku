@@ -1,8 +1,12 @@
 import React from "react";
 
-const Four = () => {
+const Four = ({ stageArea }) => {
   return (
-    <div className="piece-container" id="piece-4">
+    <div
+      className="piece-container"
+      id="piece-4"
+      style={{ gridArea: stageArea }}
+    >
       <div className="piece__single" />
       <div className="piece__single" />
       <div className="piece__single" />
