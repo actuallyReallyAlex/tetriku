@@ -1,8 +1,12 @@
 import React from "react";
 
-const TwentyFour = () => {
+const TwentyFour = ({ stageArea }) => {
   return (
-    <div className="piece-container" id="piece-24">
+    <div
+      className="piece-container"
+      id="piece-24"
+      style={{ gridArea: stageArea }}
+    >
       <div className="piece__single piece__single__1" />
       <div className="piece__single piece__single__2" />
       <div className="piece__single piece__single__6" />
