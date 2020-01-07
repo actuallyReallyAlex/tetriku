@@ -1,6 +1,11 @@
+body {
+  margin: 0;
+}
+
 #app {
   align-items: center;
   display: flex;
+  flex-direction: column;
   height: 100vh;
   justify-content: center;
   width: 100vw;
@@ -37,4 +42,10 @@
 
 .square__border-bottom__thin {
   border-bottom: solid 1px grey;
+}
+
+#stage {
+  display: grid;
+  grid-template-columns: 90px 90px 90px;
+  grid-template-rows: 150px;
 }
