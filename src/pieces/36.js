@@ -1,10 +1,22 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const ThirtySix = ({ stageArea }) => {
+const ThirtySix = ({
+  pieceNumber,
+  selectedPiece,
+  setSelectedPiece,
+  stageArea
+}) => {
+  const classList = ["piece-container"];
+  if (selectedPiece === pieceNumber)
+    classList.push("piece-container__selected");
   return (
     <div
-      className="piece-container"
+      className={classList.join(" ")}
       id="piece-36"
+      onClick={() => {
+        setSelectedPiece(pieceNumber);
+      }}
       style={{ gridArea: stageArea }}
     >
       <div className="piece__single piece__single__2" />
@@ -13,6 +25,13 @@ const ThirtySix = ({ stageArea }) => {
       <div className="piece__single piece__single__13" />
     </div>
   );
+};
+
+ThirtySix.propTypes = {
+  pieceNumber: PropTypes.number.isRequired,
+  selectedPiece: PropTypes.number,
+  setSelectedPiece: PropTypes.func.isRequired,
+  stageArea: PropTypes.string
 };
 
 export default ThirtySix;

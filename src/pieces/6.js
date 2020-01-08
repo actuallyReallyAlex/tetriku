@@ -1,16 +1,30 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Six = ({ stageArea }) => {
+const Six = ({ pieceNumber, selectedPiece, setSelectedPiece, stageArea }) => {
+  const classList = ["piece-container", "piece-container__column"];
+  if (selectedPiece === pieceNumber)
+    classList.push("piece-container__selected");
   return (
     <div
-      className="piece-container piece-container__column"
+      className={classList.join(" ")}
       id="piece-6"
+      onClick={() => {
+        setSelectedPiece(pieceNumber);
+      }}
       style={{ gridArea: stageArea }}
     >
       <div className="piece__single" />
       <div className="piece__single" />
     </div>
   );
+};
+
+Six.propTypes = {
+  pieceNumber: PropTypes.number.isRequired,
+  selectedPiece: PropTypes.number,
+  setSelectedPiece: PropTypes.func.isRequired,
+  stageArea: PropTypes.string
 };
 
 export default Six;
