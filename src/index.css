@@ -73,6 +73,14 @@ body {
   grid-auto-flow: column;
 }
 
+.piece-container__selected > div {
+  background: yellow;
+}
+
+.piece-container:hover > div {
+  background: yellow;
+}
+
 .piece__single {
   background: blue;
   border: solid 1px;
